@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>User Dashboard</title>
+
+    {% load bootstrap3 %} {# load css and javascript#} {% bootstrap_css %} {% bootstrap_javascript %}
+
+    <!-- below, loads django static tag -->
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}">
+
+    </script>
+
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" media="screen" title="no title" charset="utf-8">
+
+    <script>
+        $(document).ready(function () {
+            $("p").hover(function () {
+                $(this).css("background-color", "yellow");
+            }, function () {
+                $(this).css("background-color", "pink");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <section class='border'>
+        <nav class="navbar navbar-default">
+            <h6>Test App</h6>
+            <a class='navbar-link' href="new/">Home</a>
+            <a class='navbar-link' href="new/">Sign-In</a>
+        </nav>
+
+    </section>
+
+    <div id="textbox">
+        <h3>Welcome to the Test</h3>
+        <p>We're going to build a cool application using and MVC framework. This application was built by Nicci.</p>
+        <button><a href="register/">Start</a></button>
+    </div>
+
+    <div id="about">
+        <div id="about-details">
+            <h5>Manage Users</h5>
+            <p>Using this application, you'll learn how to add, remove and edit users for the application.</p>
+        </div>
+        <div id="about-details">
+            <h5>Leave Messages</h5>
+            <p>Using this application, you'll learn how to add, remove and edit users for the application.</p>
+        </div>
+        <div id="about-details">
+            <h5>Edit User Information</h5>
+            <p>Using this application, you'll learn how to add, remove and edit users for the application.</p>
+        </div>
+    </div>
+    <div>
+        <video width='320' height='240' controls>
+            <source src="{% static 'videos/maya.mov' type='video/mov' %}"> Your browser does not support the video tag.
+        </video>
+    </div>
+    <div>
+        <img width='320' src="{% static 'photos/positive.jpg' %}" alt="PhotonPositive" />
+    </div>
+
+</body>
+
+</html>

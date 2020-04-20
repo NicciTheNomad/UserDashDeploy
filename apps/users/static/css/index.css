@@ -1,0 +1,21 @@
+#textbox {
+  background-color: grey;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#about {
+  padding: 10px;
+  margin: 10px;
+}
+
+#about-details {
+  display: inline-block;
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+}
+
+h5 {
+  color: orange;
+}

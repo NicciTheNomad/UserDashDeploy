@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>User Dashboard</title>
+
+    {% load bootstrap3 %} {# load css and javascript#} {% bootstrap_css %} {% bootstrap_javascript %}
+
+    <!-- below, loads django static tag -->
+    {% load staticfiles %}
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}">
+
+    </script>
+
+    <link rel="stylesheet" href="{% static 'css/register.css' %}" media="screen" title="no title" charset="utf-8">
+
+</head>
+
+<body>
+
+    <section class='border'>
+        <nav id="nav-bar" class="navbar navbar-default">
+            <h5>Test App</h5>
+            <a class='navbar-link' href="dashboard/">Home</a>
+            <a class='navbar-link' href="profile/">Sign-In</a>
+        </nav>
+
+    </section>
+    <section class='container'>
+        <fieldset disabled="scheduler-border">
+            <legend>Register</legend>
+            <form action="/register" method="POST">
+                {%csrf_token%}
+                <p>First Name: </p> <input type="text" name="first_name">
+                <p>Last Name: </p> <input type="text" name="last_name">
+                <p>Email: </p> <input type="text" name="email">
+                <p>Password: </p> <input type="text" name="password">
+                <h6>* password should be at least 5 characters</h6>
+                Confirm password: <input type="text" name="password_confirm"><br>
+                <button type="submit">Register</button>
+            </form>
+        </fieldset>
+    </section>
+    <div>
+        <video width='320' height='240' controls>
+            <source src="{% static 'videos/maya.mov' type='video/mov' %}"> Your browser does not support the video tag.
+        </video>
+    </div>
+    <div>
+        <img width='320' src="{% static 'photos/positive.jpg' %}" alt="PhotonPositive" />
+    </div>
+
+</body>
+
+</html>

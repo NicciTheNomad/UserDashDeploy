@@ -1,0 +1,12 @@
+h5 {
+  color: orange;
+}
+
+#nav-bar {
+  display: inline-block;
+  text-align: center;
+}
+
+#nav-bar h5 {
+  color: blue;
+}
